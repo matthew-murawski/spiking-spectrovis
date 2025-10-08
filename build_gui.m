@@ -172,7 +172,7 @@ slider_min = chunk_start;
 slider_max = max(slider_min, chunk_end - viewport_width);
 slider.Limits = [slider_min, slider_max];
 slider.Value = slider_min;
-slider.ValueChangingFcn = @slider_callback;
+slider.ValueChangedFcn = @slider_callback;
 
 xlim(ax1, [slider.Value, slider.Value + viewport_width]);
 fig.UserData = struct('axes', [ax1, ax2, ax3, ax4], 'viewport_width', viewport_width, ...
